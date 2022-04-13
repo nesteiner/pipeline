@@ -2,8 +2,8 @@
 
 * 用法
 #+begin_src julia
-  using pipeline
-  @pipeline 1 begin
+  using Pipeline
+  Pipeline.@pipeline 1 begin
       x -> x + 1
       x -> x * 2
       x -> x / 3
