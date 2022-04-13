@@ -11,7 +11,7 @@ end
 #     x -> x + 1 |>
 #     x -> x * 2 |>
 #     x -> x / 3
-
+module Pipeline
 macro pipeline(variable, beginExpr::Expr)
     exprs = filter(x -> isa(x, Expr), beginExpr.args) |>
         nums -> convert(Vector{Expr}, nums)
@@ -48,4 +48,5 @@ end
 
 macro pipeline(variable)
     variable
+end
 end
